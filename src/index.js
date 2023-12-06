@@ -9,19 +9,24 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    frame: false,
+    titleBarStyle: 'hidden',
+    width: 382,
+    height: 382,
     webPreferences: {
       nodeIntegration: true,
-      preload: path.join(__dirname, 'preload.js'),
-    },
+    }
   });
 
-  // and load the index.html of the app.
+  // Only Show window after rendering page
+  mainWindow.once('ready-to-show', () => { 
+    mainWindow.show()
+  })
+
+  // Load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+
 };
 
 // This method will be called when Electron has finished

@@ -1,7 +1,28 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
+  -webkit-app-region: drag;
   margin: auto;
   max-width: 38rem;
   padding: 2rem;
+}
+
+button{
+  -webkit-app-region: no-drag;
+  padding: 10px 20px;
+  display:grid;
+  margin-right:auto;
+}
+
+.container{
+  border: 5px;
+  top: 50%;
+  padding:10px;
+  display: flex;
+  justify-content: center;
+}
+
+#timer {
+  font-size: 128px;
+  font-style: bold
 }
