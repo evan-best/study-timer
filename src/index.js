@@ -15,7 +15,8 @@ const createWindow = () => {
     height: 382,
     webPreferences: {
       nodeIntegration: true,
-    }
+    },
+    resizable: false
   });
 
   // Only Show window after rendering page
