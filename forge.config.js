@@ -1,6 +1,8 @@
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: 'src/images/app-icon',
+    osxSign: {}
   },
   rebuildConfig: {},
   makers: [
